@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "project": {
+    "name": "Pause"
+  },
+  "api": {
+    "projectId": "rvn62zk9",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "dashboard-widget-netlify",
+    "media-library",
+    "media",
+    "netlify-deploy-status-badge",
+    "@sanity/production-preview"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "src/deskStructure"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboard"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "src/logo.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "src/variables.css"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "src/resolveProductionUrl.js"
+    }
+  ]
+}

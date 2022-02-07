@@ -1,0 +1,80 @@
+{
+  "SanityContent": {
+    "description": "Auto imported from node_modules/@nuxtjs/sanity/dist/components/sanity-content.js"
+  },
+  "SanityFile": {
+    "description": "Auto imported from node_modules/@nuxtjs/sanity/dist/components/sanity-file.js"
+  },
+  "SanityImage": {
+    "description": "Auto imported from node_modules/@nuxtjs/sanity/dist/components/sanity-image.js"
+  },
+  "BioBanner": {
+    "description": "Auto imported from components/BioBanner.vue"
+  },
+  "CustomButton": {
+    "description": "Auto imported from components/CustomButton.vue"
+  },
+  "FooterCTA": {
+    "description": "Auto imported from components/FooterCTA.vue"
+  },
+  "HorizontalBanner": {
+    "description": "Auto imported from components/HorizontalBanner.vue"
+  },
+  "PageIntro": {
+    "description": "Auto imported from components/PageIntro.vue"
+  },
+  "AboutIntro": {
+    "description": "Auto imported from components/About/Intro.vue"
+  },
+  "AboutPeriBanner": {
+    "description": "Auto imported from components/About/PeriBanner.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
+  },
+  "ContactFormNetlify": {
+    "description": "Auto imported from components/Contact/FormNetlify.vue"
+  },
+  "ContactFormWrapper": {
+    "description": "Auto imported from components/Contact/FormWrapper.vue"
+  },
+  "ContactSecurityMsg": {
+    "description": "Auto imported from components/Contact/SecurityMsg.vue"
+  },
+  "FAQsAccordion": {
+    "description": "Auto imported from components/FAQs/Accordion.vue"
+  },
+  "FAQsAccordionItem": {
+    "description": "Auto imported from components/FAQs/AccordionItem.vue"
+  },
+  "FAQsAccordionShort": {
+    "description": "Auto imported from components/FAQs/AccordionShort.vue"
+  },
+  "HomeBanner": {
+    "description": "Auto imported from components/Home/Banner.vue"
+  },
+  "HomeCTA": {
+    "description": "Auto imported from components/Home/CTA.vue"
+  },
+  "SiteFooter": {
+    "description": "Auto imported from components/Site/Footer.vue"
+  },
+  "SiteFooterMsg": {
+    "description": "Auto imported from components/Site/FooterMsg.vue"
+  },
+  "SiteHeader": {
+    "description": "Auto imported from components/Site/Header.vue"
+  },
+  "SiteLogo": {
+    "description": "Auto imported from components/Site/Logo.vue"
+  },
+  "SiteSubmark": {
+    "description": "Auto imported from components/Site/Submark.vue"
+  },
+  "TestimonialsGrid": {
+    "description": "Auto imported from components/Testimonials/Grid.vue"
+  },
+  "TestimonialsSlider": {
+    "description": "Auto imported from components/Testimonials/Slider.vue"
+  }
+}

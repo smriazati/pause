@@ -1,0 +1,150 @@
+<template>
+  <div class="horizontal-banner">
+    <div v-if="content">
+      <div v-if="content.panels" class="panels-wrapper" ref="panelsContainer">
+        <div
+          v-for="(item, index) in content.panels"
+          :key="item._key"
+          class="panel"
+          ref="panel"
+        >
+          <div class="contained grid-fixed">
+            <div class="text-wrapper">
+              <div v-if="index > 0" class="counter">
+                <p>{{ index }} / {{ content.panels.length - 1 }}</p>
+              </div>
+              <h2 v-if="item.headline">{{ item.headline }}</h2>
+              <p v-if="item.subheadline" class="big">
+                {{ item.subheadline }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import { groq } from "@nuxtjs/sanity";
+
+export default {
+  props: {
+    schemaType: {
+      type: String,
+      required: true,
+    },
+  },
+  async fetch() {
+    const query = groq`*[_type == "${this.schemaType}"]{
+ "panels" : horizontalBanner.panels 
+}[0]`;
+    this.content = await this.$sanity.fetch(query);
+  },
+  fetchOnServer: false,
+  data: () => ({
+    content: null,
+  }),
+  // watch: {
+  //   content() {
+  //     if (this.content) {
+  //       if (this.content.panels) {
+  //         // this.setAnim();
+  //         console.log(this.content.panels);
+  //       }
+  //     }
+  //   },
+  // },
+  updated() {
+    this.setAnim();
+  },
+  methods: {
+    setAnim() {
+      const gsap = this.$gsap;
+      /* Main navigation */
+      let panelsContainer = this.$refs.panelsContainer;
+
+      /* Panels */
+      const refs = this.$refs;
+      const panels = refs.panel;
+      if (!panels) {
+        return;
+      }
+      // console.log(panels, panelsContainer);
+      gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: panelsContainer,
+          pin: true,
+          // markers: true,
+          start: "top top",
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (panels.length - 1),
+            inertia: false,
+            duration: { min: 0.1, max: 0.1 },
+          },
+          end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
+        },
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+.horizontal-banner {
+  background: $eggplant;
+  color: $cloud;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  h2 {
+    margin-bottom: $m-spacer;
+  }
+
+  .panels-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    overflow: hidden;
+    .panel {
+      position: relative;
+      display: flex;
+      min-width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      align-items: center;
+      .grid-fixed {
+        .text-wrapper {
+          grid-column: 4 / span 6;
+          text-align: center;
+        }
+      }
+      &:first-child {
+        .grid-fixed {
+          .text-wrapper {
+            grid-column: 2 / span 6;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .counter p {
+    @include interTypeface;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $poppy;
+    margin-bottom: $s-spacer;
+  }
+}
+</style>
