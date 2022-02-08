@@ -1,31 +1,29 @@
 <template>
   <div class="contained home-banner" ref="container">
-    <div v-if="content">
-      <div class="grid-fixed">
-        <div class="column text-wrapper">
-          <h1 v-if="content.copy.headline">{{ content.copy.headline }}</h1>
-          <p v-if="content.copy.subheadline" class="big">
-            <SanityContent :blocks="content.copy.subheadline" />
-          </p>
-          <nuxt-link to="/book" class="btn outline"
-            ><span>Schedule Session with Kara</span></nuxt-link
-          >
-        </div>
-        <div class="column flex-column interlocked-pictures">
-          <figure v-if="content.image1">
-            <img
-              :src="$urlFor(content.image1.url).size(295)"
-              :alt="content.image1.alt"
-            />
-          </figure>
-          <div class="line" ref="line"></div>
-          <figure v-if="content.image2">
-            <img
-              :src="$urlFor(content.image2.url).size(295)"
-              :alt="content.image2.alt"
-            />
-          </figure>
-        </div>
+    <div v-if="content" class="grid-fixed">
+      <div class="column text-wrapper gsap-fade-in" ref="text">
+        <h1 v-if="content.copy.headline">{{ content.copy.headline }}</h1>
+        <p v-if="content.copy.subheadline" class="big">
+          <SanityContent :blocks="content.copy.subheadline" />
+        </p>
+        <nuxt-link to="/book" class="btn outline"
+          ><span>Schedule Session with Kara</span></nuxt-link
+        >
+      </div>
+      <div class="column flex-column interlocked-pictures">
+        <figure v-if="content.image1" class="gsap-fade-in" ref="img1">
+          <img
+            :src="$urlFor(content.image1.url).size(295)"
+            :alt="content.image1.alt"
+          />
+        </figure>
+        <div class="line" ref="line"></div>
+        <figure v-if="content.image2" class="gsap-fade-in" ref="img2">
+          <img
+            :src="$urlFor(content.image2.url).size(295)"
+            :alt="content.image2.alt"
+          />
+        </figure>
       </div>
     </div>
   </div>
@@ -52,10 +50,48 @@ export default {
     content: null,
   }),
   updated() {
-    this.setAnim();
+    this.setBannerEntranceAnim();
+    this.setLineAnim();
   },
   methods: {
-    setAnim() {
+    setBannerEntranceAnim() {
+      const gsap = this.$gsap;
+      const text = this.$refs.text;
+      const img1 = this.$refs.img1;
+      const img2 = this.$refs.img2;
+
+      gsap.set(text, {
+        autoAlpha: 0,
+        x: "-25%",
+      });
+      gsap.set(img1, {
+        autoAlpha: 0,
+        x: "25%",
+      });
+      gsap.set(img2, {
+        autoAlpha: 0,
+        x: "25%",
+      });
+
+      gsap.to(text, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+      });
+      gsap.to(img1, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.3,
+      });
+      gsap.to(img2, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.5,
+      });
+    },
+    setLineAnim() {
       const gsap = this.$gsap;
       const container = this.$refs.container;
       const line = this.$refs.line;
@@ -76,6 +112,7 @@ export default {
 
 <style lang="scss">
 .home-banner {
+  min-height: 700px;
   .text-wrapper {
     > *:not(:last-child) {
       margin-bottom: $m-spacer;
