@@ -1,5 +1,5 @@
 <template>
-  <div class="contained home-banner">
+  <div class="contained home-banner" ref="container">
     <div v-if="content">
       <div class="grid-fixed">
         <div class="column text-wrapper">
@@ -18,6 +18,7 @@
               :alt="content.image1.alt"
             />
           </figure>
+          <div class="line" ref="line"></div>
           <figure v-if="content.image2">
             <img
               :src="$urlFor(content.image2.url).size(295)"
@@ -50,6 +51,26 @@ export default {
   data: () => ({
     content: null,
   }),
+  updated() {
+    this.setAnim();
+  },
+  methods: {
+    setAnim() {
+      const gsap = this.$gsap;
+      const container = this.$refs.container;
+      const line = this.$refs.line;
+      gsap.to(line, {
+        height: "100%",
+        scrollTrigger: {
+          trigger: container,
+          // markers: true,
+          scrub: true,
+          start: "top top",
+          end: "bottom top",
+        },
+      });
+    },
+  },
 };
 </script>
 
@@ -76,15 +97,27 @@ export default {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 0.333fr);
       height: 100%;
-      grid-gap: 10rem;
+      grid-column-gap: 24px;
+      grid-row-gap: $s-spacer;
+      padding-top: 2rem;
+      figure {
+        position: relative;
+      }
       figure:first-child {
         grid-row: 1 / 3;
         grid-column: 1 / 4;
-        padding-top: 1rem;
       }
       figure:last-child {
         grid-row: 2 / 4;
         grid-column: 2 / 5;
+        padding-left: 1rem;
+      }
+      .line {
+        border-left: 1px solid $eggplant;
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        margin-top: 100px;
+        height: 0;
       }
     }
   }

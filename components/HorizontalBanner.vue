@@ -79,11 +79,11 @@ export default {
           // markers: true,
           start: "top top",
           scrub: 1,
-          snap: {
-            snapTo: 1 / (panels.length - 1),
-            inertia: false,
-            duration: { min: 0.1, max: 0.1 },
-          },
+          // snap: {
+          //   snapTo: 1 / (panels.length - 1),
+          //   inertia: false,
+          //   duration: { min: 0.1, max: 0.1 },
+          // },
           end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
         },
       });
@@ -120,8 +120,10 @@ export default {
       align-items: center;
       .grid-fixed {
         .text-wrapper {
-          grid-column: 4 / span 6;
+          grid-column: 3 / span 8;
           text-align: center;
+          background: $eggplant;
+          padding: 87px;
         }
       }
       &:first-child {
@@ -129,9 +131,44 @@ export default {
           .text-wrapper {
             grid-column: 2 / span 6;
             text-align: left;
+            padding-left: 0;
           }
         }
       }
+    }
+  }
+
+  .panel {
+    position: relative;
+    overflow: hidden;
+    * {
+      position: relative;
+      z-index: 8;
+    }
+    &:before {
+      content: " ";
+      display: flex;
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid $poppy;
+      z-index: 5;
+    }
+    &:first-child:before {
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+    &:last-child:before {
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    }
+    &:last-child:after {
+      content: " ";
+      display: flex;
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      border-bottom: 1px solid $poppy;
+      // height: 30px;
+      transform: rotate(-90deg);
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
     }
   }
 

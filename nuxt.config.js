@@ -1,8 +1,8 @@
 export default {
   target: 'static',
   head: {
-        titleTemplate: "%s | Site Name",
-        title: 'Site Name',
+        titleTemplate: "%s | Pause",
+        title: 'Pause',
         htmlAttrs: {
         lang: 'en'
       },

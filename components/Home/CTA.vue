@@ -1,9 +1,9 @@
 <template>
-  <div class="contained home-cta">
+  <div class="contained home-cta" ref="container">
     <div v-if="content">
       <div class="grid-fixed">
         <div class="column image-wrapper image-wrapper-1">
-          <figure v-if="content.image1">
+          <figure v-if="content.image1" ref="image1">
             <img
               :src="$urlFor(content.image1.url).size(295)"
               :alt="content.image1.alt"
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="column image-wrapper image-wrapper-2">
-          <figure v-if="content.image2">
+          <figure v-if="content.image2" ref="image2">
             <img
               :src="$urlFor(content.image2.url).size(295)"
               :alt="content.image2.alt"
@@ -52,6 +52,33 @@ export default {
   data: () => ({
     content: null,
   }),
+  updated() {
+    this.setAnim();
+  },
+  methods: {
+    setAnim() {
+      const gsap = this.$gsap;
+      const container = this.$refs.container;
+      const img1 = this.$refs.image1;
+      const img2 = this.$refs.image2;
+      gsap.to(img1, {
+        y: -200,
+        scrollTrigger: {
+          trigger: container,
+          // markers: true,
+          scrub: true,
+        },
+      });
+      gsap.to(img2, {
+        y: -50,
+        scrollTrigger: {
+          trigger: container,
+          // markers: true,
+          scrub: true,
+        },
+      });
+    },
+  },
 };
 </script>
 
