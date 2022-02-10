@@ -71,6 +71,7 @@ export default {
   background: $periwinkle;
   padding-top: $xl-spacer;
   padding-bottom: $s-spacer;
+
   margin-top: $l-spacer;
   max-width: 100%;
   width: 100%;
@@ -87,6 +88,9 @@ export default {
       grid-row: 2 / 3;
       display: flex;
       justify-content: space-between;
+      @media (max-width: $collapse-bp) {
+        margin-top: $xl-spacer;
+      }
     }
   }
 

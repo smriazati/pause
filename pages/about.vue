@@ -1,5 +1,5 @@
 <template>
-  <div class="home page-wrapper">
+  <div class="about page-wrapper">
     <main class="page-container">
       <header>
         <PageIntro :schemaType="schemaType" />
@@ -7,13 +7,13 @@
       <section>
         <AboutIntro />
       </section>
-      <section>
+      <section class="banner-section">
         <HorizontalBanner :schemaType="schemaType" />
       </section>
       <section>
         <AboutPeriBanner />
       </section>
-      <section>
+      <section class="bio-section">
         <BioBanner :schemaType="schemaType" :readMore="false" />
       </section>
       <footer class="page-footer">
@@ -33,3 +33,16 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.about.page-wrapper {
+  @media (max-width: $collapse-bp) {
+    .banner-section {
+      margin-top: -35vh;
+    }
+    .bio-section {
+      margin-top: -25vh;
+    }
+  }
+}
+</style>

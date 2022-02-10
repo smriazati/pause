@@ -1,15 +1,6 @@
 <template>
   <div class="contained home-banner" ref="container">
     <div v-if="content" class="grid-fixed">
-      <div class="column text-wrapper gsap-fade-in" ref="text">
-        <h1 v-if="content.copy.headline">{{ content.copy.headline }}</h1>
-        <p v-if="content.copy.subheadline" class="big">
-          <SanityContent :blocks="content.copy.subheadline" />
-        </p>
-        <nuxt-link to="/book" class="btn outline"
-          ><span>Schedule Session with Kara</span></nuxt-link
-        >
-      </div>
       <div class="column flex-column interlocked-pictures">
         <figure v-if="content.image1" class="gsap-fade-in" ref="img1">
           <img
@@ -24,6 +15,15 @@
             :alt="content.image2.alt"
           />
         </figure>
+      </div>
+      <div class="column text-wrapper gsap-fade-in" ref="text">
+        <h1 v-if="content.copy.headline">{{ content.copy.headline }}</h1>
+        <p v-if="content.copy.subheadline" class="big">
+          <SanityContent :blocks="content.copy.subheadline" />
+        </p>
+        <nuxt-link to="/book" class="btn outline"
+          ><span>Schedule Session with Kara</span></nuxt-link
+        >
       </div>
     </div>
   </div>
@@ -64,6 +64,7 @@ export default {
         autoAlpha: 0,
         x: "-25%",
       });
+
       gsap.set(img1, {
         autoAlpha: 0,
         x: "25%",
@@ -119,15 +120,18 @@ export default {
     }
   }
   .grid-fixed {
-    > .column:first-child {
+    > .text-wrapper {
       grid-column: 2 / span 5;
     }
-    > .column:nth-child(2) {
+    > .interlocked-pictures {
       grid-column: 8 / span 4;
     }
 
     .text-wrapper {
-      padding: $xl-spacer 0;
+      @include containerVertPadding;
+      @media (max-width: $collapse-bp) {
+        padding-top: 0;
+      }
     }
     .interlocked-pictures {
       display: grid;
@@ -137,6 +141,10 @@ export default {
       grid-column-gap: 24px;
       grid-row-gap: $s-spacer;
       padding-top: 2rem;
+      @media (max-width: $collapse-bp) {
+        display: flex;
+        justify-content: center;
+      }
       figure {
         position: relative;
       }

@@ -141,6 +141,9 @@ export default {
   .panel {
     position: relative;
     overflow: hidden;
+    @media (max-width: $collapse-bp) {
+      width: 75%;
+    }
     * {
       position: relative;
       z-index: 8;

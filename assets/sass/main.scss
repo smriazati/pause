@@ -133,6 +133,13 @@ button,
   @include gridFixed;
 }
 
+.contained .grid-fixed {
+  @media (max-width: $collapse-bp) {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
 .grid-fixed-nested {
   @include gridFixedNested;
 }
@@ -160,6 +167,14 @@ button,
 
 .flex-row {
   display: flex;
+
+  @media (max-width: $collapse-bp) {
+    &:not(.no-collapse) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
 
   &.center {
     justify-content: center

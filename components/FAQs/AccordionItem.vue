@@ -9,14 +9,17 @@
       class="accordion-open link-hover"
       @click="openAccordion()"
     >
-      <div class="flex-row space-between">
+      <div class="flex-row no-collapse space-between">
         <h3>{{ item.question }}</h3>
         <button class="icon down"></button>
       </div>
     </div>
     <div v-else class="accordion-collapse-area">
       <div class="flex-column">
-        <div class="flex-row space-between" @click="closeAccordion()">
+        <div
+          class="flex-row no-collapse space-between"
+          @click="closeAccordion()"
+        >
           <h3>{{ item.question }}</h3>
           <button class="icon up"></button>
         </div>

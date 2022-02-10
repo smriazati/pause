@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss">
 .page-intro {
-  padding: $xl-spacer 0;
+  @include containerVertPadding;
   .grid-fixed {
     > .column:first-child {
       grid-row: 1 / 2;

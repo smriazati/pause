@@ -1,5 +1,5 @@
 <template>
-  <div class="contained about-intro">
+  <div class="contained about-intro" ref="container">
     <div v-if="content">
       <div class="grid-fixed">
         <div class="column text-wrapper">
@@ -8,8 +8,8 @@
             <SanityContent :blocks="content.copy" />
           </div>
         </div>
-        <div class="column list-wrapper blob">
-          <div v-if="content.list">
+        <div class="column list-wrapper blob gsap-fade-in" ref="bg">
+          <div class="inner-list gsap-fade-in" v-if="content.list" ref="text">
             <SanityContent :blocks="content.list" />
           </div>
         </div>
@@ -33,6 +33,44 @@ export default {
   data: () => ({
     content: null,
   }),
+  updated() {
+    this.setAnim();
+  },
+  methods: {
+    setAnim() {
+      const gsap = this.$gsap;
+      const container = this.$refs.container;
+      const text = this.$refs.text;
+      const bg = this.$refs.bg;
+
+      gsap.set(text, {
+        autoAlpha: 0,
+      });
+      gsap.set(bg, {
+        autoAlpha: 0,
+      });
+      gsap.to(bg, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: text,
+          scrub: false,
+          // markers: true,
+        },
+      });
+      gsap.to(text, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: text,
+          scrub: false,
+        },
+      });
+    },
+  },
 };
 </script>
 
@@ -73,15 +111,31 @@ export default {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: flex-start;
+    @media (max-width: $collapse-bp) {
+      justify-content: center;
+    }
+    .inner-list {
+      @media (max-width: $collapse-bp) {
+        padding: 5vw 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
     p {
       @include pDetailStyle;
+      padding-top: 1rem;
       text-transform: uppercase;
     }
     ul {
       padding-left: 1rem;
       @include pSmallStyle;
+      @media (max-width: $collapse-bp) {
+        li {
+          padding: 5px 0;
+        }
+      }
     }
   }
 }

@@ -16,6 +16,8 @@ $collapse-bp: 960px;
 $small-bp: 640px;
 $xl-bp: 1300px;
 
+
+
 $container-width: 1312px;
 
 $grid-column-gap: 24px;
@@ -39,6 +41,11 @@ $grid-column-count: 12;
   grid-template-columns: repeat($grid-column-count, 1fr);
   grid-auto-rows: auto;
   grid-gap: $grid-gap;
+
+  @media (max-width: $collapse-bp) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @mixin gridFixed {
@@ -77,5 +84,13 @@ $grid-column-count: 12;
   >* {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
+  }
+}
+
+@mixin containerVertPadding {
+  padding: $xl-spacer 0;
+
+  @media (max-width: $collapse-bp) {
+    padding: $l-spacer 0;
   }
 }

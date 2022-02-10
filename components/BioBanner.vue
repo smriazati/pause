@@ -62,12 +62,19 @@ export default {
 <style lang="scss">
 .bio-banner {
   padding: $xxxl-spacer 0 $l-spacer 0;
+  @media (max-width: $collapse-bp) {
+    padding: $xxl-spacer 0 $m-spacer 0;
+  }
   .grid-fixed {
     > .column:first-child {
       grid-column: 2 / span 5;
     }
     > .column:nth-child(2) {
       grid-column: 9 / span 3;
+    }
+
+    @media (max-width: $collapse-bp) {
+      flex-direction: column-reverse;
     }
   }
 
@@ -79,10 +86,27 @@ export default {
     p {
       margin-bottom: $s-spacer;
     }
+    @media (max-width: $collapse-bp) {
+      margin-top: -7vh;
+    }
   }
   .image-wrapper {
     figure {
       min-width: 100%;
+    }
+    @media (max-width: $collapse-bp) {
+      align-self: flex-end;
+      clip-path: circle(50%);
+      width: 35vh;
+      height: 35vh;
+      transform: translateX(25%);
+      * {
+        height: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }

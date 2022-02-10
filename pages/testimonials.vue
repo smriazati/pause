@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss">
 .testimonials.page-wrapper {
-  padding: $xl-spacer 0;
+  @include containerVertPadding;
   header {
     h1 {
       grid-column: 2 / span 11;

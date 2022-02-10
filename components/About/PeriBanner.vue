@@ -34,7 +34,10 @@ export default {
 <style lang="scss">
 .peri-banner {
   background: $periwinkle;
-  padding: $xl-spacer 0;
+  @include containerVertPadding;
+  @media (max-width: $collapse-bp) {
+    padding: $xxxl-spacer 0;
+  }
   .grid-fixed {
     > .column:first-child {
       grid-column: 2 / span 4;
@@ -46,6 +49,9 @@ export default {
     }
     p {
       @include pBigStyle;
+      @media (max-width: $collapse-bp) {
+        margin-top: $m-spacer;
+      }
     }
   }
 }

@@ -15,7 +15,7 @@
         <nuxt-link to="/"><SiteSubmark /></nuxt-link>
       </div>
       <nav class="secondary">
-        <ul class="flex-row">
+        <ul class="flex-row no-collapse">
           <li>
             <nuxt-link to="/page/privacy-policy">Privacy Policy</nuxt-link>
           </li>
@@ -49,17 +49,39 @@ footer.site-footer {
   background: white;
   .wrapper {
     display: grid;
-    padding: $xxl-spacer 0 $ss-spacer 0;
+    @media (min-width: $collapse-bp) {
+      padding: $xxl-spacer 0 $ss-spacer 0;
+    }
     grid-template-rows: auto auto auto;
     grid-template-columns: 100px 1fr 100px;
     grid-template-areas:
       "nav1 nav1 nav1"
       "mark nav2 btn"
       "mark disc btn";
+    @media (max-width: $collapse-bp) {
+      grid-template-rows: auto auto auto auto;
+
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "nav1 nav1 nav1"
+        "mark . btn"
+        "nav2 nav2 nav2"
+        "disc disc disc";
+    }
     nav.primary {
       grid-area: nav1;
       place-self: center;
-      padding-bottom: $l-spacer;
+      @media (min-width: $collapse-bp) {
+        padding-bottom: $l-spacer;
+      }
+      @media (max-width: $collapse-bp) {
+        text-align: center;
+        padding-top: $s-spacer;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
     }
     .brand {
       grid-area: mark;
@@ -69,13 +91,22 @@ footer.site-footer {
     }
     nav.secondary {
       grid-area: nav2;
+      @media (max-width: $collapse-bp) {
+        padding: 12px 0;
+      }
     }
     .disclaimer {
       grid-area: disc;
+      @media (max-width: $collapse-bp) {
+        padding: 12px 0 24px 0;
+      }
     }
     .back-to-top {
       grid-area: btn;
       justify-self: end;
+      @media (max-width: $collapse-bp) {
+        align-self: center;
+      }
     }
   }
 }
