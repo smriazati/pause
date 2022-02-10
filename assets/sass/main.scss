@@ -109,6 +109,12 @@ button,
     @include btnPrimaryStyle;
   }
 
+  &.fancy {
+    @include romieTypeface;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   &.text {
     @include btnTextStyle;
   }
@@ -285,4 +291,11 @@ textarea {
 
 .gsap-fade-in {
   opacity: 0;
+}
+
+.blob {
+  background: $periwinkle;
+  mask-image: url("../icons/blob.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }

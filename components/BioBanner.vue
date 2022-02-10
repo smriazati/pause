@@ -1,6 +1,6 @@
 <template>
-  <div class="bio-banner contained">
-    <div v-if="content">
+  <div class="bio-banner">
+    <div v-if="content" class="contained">
       <div class="grid-fixed">
         <div class="column text-wrapper">
           <h3 v-if="content.headline">{{ content.headline }}</h3>
@@ -62,8 +62,9 @@ export default {
 <style lang="scss">
 .bio-banner {
   padding: $xxxl-spacer 0 $l-spacer 0;
+  overflow: hidden;
   @media (max-width: $collapse-bp) {
-    padding: $xxl-spacer 0 $m-spacer 0;
+    padding: $m-spacer 0;
   }
   .grid-fixed {
     > .column:first-child {

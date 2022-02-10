@@ -8,7 +8,7 @@
             :alt="content.image1.alt"
           />
         </figure>
-        <div class="line" ref="line"></div>
+        <div class="line gsap-fade-in" ref="line"></div>
         <figure v-if="content.image2" class="gsap-fade-in" ref="img2">
           <img
             :src="$urlFor(content.image2.url).size(295)"
@@ -51,11 +51,11 @@ export default {
   }),
   updated() {
     this.setBannerEntranceAnim();
-    this.setLineAnim();
   },
   methods: {
     setBannerEntranceAnim() {
       const gsap = this.$gsap;
+      const container = this.$refs.container;
       const text = this.$refs.text;
       const img1 = this.$refs.img1;
       const img2 = this.$refs.img2;
@@ -91,11 +91,17 @@ export default {
         duration: 1,
         delay: 0.5,
       });
-    },
-    setLineAnim() {
-      const gsap = this.$gsap;
-      const container = this.$refs.container;
+
       const line = this.$refs.line;
+      gsap.set(line, {
+        height: "30%",
+        autoAlpha: 0,
+      });
+      gsap.to(line, {
+        autoAlpha: 1,
+        duration: 0.1,
+        delay: 1.5,
+      });
       gsap.to(line, {
         height: "100%",
         scrollTrigger: {
@@ -122,9 +128,11 @@ export default {
   .grid-fixed {
     > .text-wrapper {
       grid-column: 2 / span 5;
+      grid-row: 1 / 2;
     }
     > .interlocked-pictures {
       grid-column: 8 / span 4;
+      grid-row: 1 / 2;
     }
 
     .text-wrapper {
@@ -139,7 +147,7 @@ export default {
       grid-template-rows: repeat(3, 0.333fr);
       height: 100%;
       grid-column-gap: 24px;
-      grid-row-gap: $s-spacer;
+      grid-row-gap: 10rem;
       padding-top: 2rem;
       @media (max-width: $collapse-bp) {
         display: flex;

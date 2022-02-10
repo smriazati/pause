@@ -6,6 +6,11 @@ $btnTransition: .25s ease-in all;
   padding: .75rem;
   border-radius: 6px;
   padding: 12px 18px;
+
+  @media (max-width: 960px) {
+    padding: 8px 24px;
+  }
+
   background: #A5B3EA; // periwinkle
   border: 1px solid transparent;
   transition: $btnTransition;

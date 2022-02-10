@@ -102,11 +102,8 @@ export default {
       }
     }
   }
+
   .list-wrapper {
-    background: $periwinkle;
-    mask-image: url("~/assets/icons/blob.svg");
-    mask-repeat: no-repeat;
-    mask-size: contain;
     padding: 2.5rem 5.5rem;
     margin: 1rem 0;
     display: flex;
