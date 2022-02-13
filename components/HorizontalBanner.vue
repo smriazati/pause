@@ -187,4 +187,16 @@ export default {
     margin-bottom: $s-spacer;
   }
 }
+@media (max-width: $collapse-bp) {
+  .horizontal-banner {
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
 </style>

@@ -1,11 +1,19 @@
 <template>
-  <div class="contained page-intro">
+  <div class="contained page-intro" ref="container">
     <div v-if="content">
       <div class="grid-fixed">
-        <div class="column title-wrapper" v-if="content.headline">
+        <div
+          class="column title-wrapper gsap-fade-in"
+          v-if="content.headline"
+          ref="headline"
+        >
           <h1>{{ content.headline }}</h1>
         </div>
-        <div v-if="content.subheadline" class="column text-wrapper">
+        <div
+          v-if="content.subheadline"
+          class="column text-wrapper gsap-fade-in"
+          ref="text"
+        >
           <SanityContent :blocks="content.subheadline" />
         </div>
       </div>
@@ -34,12 +42,51 @@ export default {
   data: () => ({
     content: null,
   }),
+  mounted() {
+    // console.log("mounted content", this.content);
+  },
+  updated() {
+    // console.log("updated content", this.content);
+
+    this.setBannerEntranceAnim();
+  },
+  methods: {
+    setBannerEntranceAnim() {
+      const gsap = this.$gsap;
+      // const container = this.$refs.container;
+      const headline = this.$refs.headline;
+      const text = this.$refs.text;
+
+      gsap.set(text, {
+        autoAlpha: 0,
+        x: "25%",
+      });
+
+      gsap.set(headline, {
+        autoAlpha: 0,
+        x: "-25%",
+      });
+
+      gsap.to(text, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+      });
+
+      gsap.to(headline, {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1,
+      });
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .page-intro {
   @include containerVertPadding;
+  min-height: 500px;
   .grid-fixed {
     > .column:first-child {
       grid-row: 1 / 2;

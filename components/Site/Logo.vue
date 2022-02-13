@@ -1,7 +1,11 @@
 <template>
   <span v-if="content">
     <figure>
-      <img :src="$urlFor(content.logo.url).size(93)" :alt="content.logo.alt" />
+      <img
+        :src="$urlFor(content.logo.url).size(width)"
+        :alt="content.logo.alt"
+        :width="width"
+      />
     </figure>
   </span>
 </template>
@@ -16,6 +20,12 @@ const query = groq`*[_type == "siteSettings"]{
     }
 }[0]`;
 export default {
+  props: {
+    width: {
+      type: Number,
+      required: true,
+    },
+  },
   async fetch() {
     this.content = await this.$sanity.fetch(query);
   },

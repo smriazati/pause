@@ -7,6 +7,7 @@
             <img
               :src="$urlFor(content.image1.url).size(295)"
               :alt="content.image1.alt"
+              width="295"
             />
           </figure>
         </div>
@@ -27,6 +28,7 @@
             <img
               :src="$urlFor(content.image2.url).size(295)"
               :alt="content.image2.alt"
+              width="295"
             />
           </figure>
         </div>
@@ -122,6 +124,7 @@ export default {
 
 <style lang="scss">
 .home-cta {
+  overflow: hidden;
   .grid-fixed {
     > .column {
       grid-row: 1 / 2;

@@ -77,6 +77,7 @@ export default {
 <style lang="scss">
 .about-intro {
   padding: $xxl-spacer 0;
+  min-height: 500px;
   .grid-fixed {
     > .column:first-child {
       grid-row: 1 / 2;
@@ -108,8 +109,11 @@ export default {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    // align-items: flex-start;
+    // justify-content: flex-start;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
     @media (max-width: $collapse-bp) {
       justify-content: center;
     }
@@ -126,6 +130,7 @@ export default {
       text-transform: uppercase;
     }
     ul {
+      padding-top: 1rem;
       padding-left: 1rem;
       @include pSmallStyle;
       @media (max-width: $collapse-bp) {

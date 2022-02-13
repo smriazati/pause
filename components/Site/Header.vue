@@ -7,7 +7,7 @@
       <h1>
         <nuxt-link to="/">
           <span class="visually-hidden">Pause</span>
-          <SiteLogo />
+          <SiteLogo :width="160" />
         </nuxt-link>
       </h1>
       <nav>
@@ -33,10 +33,18 @@
         <button class="menu-toggle" @click="toggleMenu"></button>
         <nav class="collapse-area">
           <ul class="flex-col">
-            <li><nuxt-link to="/about">About</nuxt-link></li>
-            <li><nuxt-link to="/services">What to Expect</nuxt-link></li>
-            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
-            <li><nuxt-link to="/book">Schedule Appointment</nuxt-link></li>
+            <li @click="toggleMenu">
+              <nuxt-link to="/about">About</nuxt-link>
+            </li>
+            <li @click="toggleMenu">
+              <nuxt-link to="/services">What to Expect</nuxt-link>
+            </li>
+            <li @click="toggleMenu">
+              <nuxt-link to="/contact">Contact</nuxt-link>
+            </li>
+            <li @click="toggleMenu">
+              <nuxt-link to="/book">Schedule Appointment</nuxt-link>
+            </li>
           </ul>
           <div class="submark-wrapper">
             <nuxt-link to="/"><SiteSubmark /></nuxt-link>
@@ -47,7 +55,7 @@
       <h1>
         <nuxt-link to="/">
           <span class="visually-hidden">Pause</span>
-          <SiteLogo />
+          <SiteLogo :width="93" />
         </nuxt-link>
       </h1>
 

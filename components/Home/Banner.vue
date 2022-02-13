@@ -6,6 +6,7 @@
           <img
             :src="$urlFor(content.image1.url).size(295)"
             :alt="content.image1.alt"
+            width="295"
           />
         </figure>
         <div class="line gsap-fade-in" ref="line"></div>
@@ -13,6 +14,7 @@
           <img
             :src="$urlFor(content.image2.url).size(295)"
             :alt="content.image2.alt"
+            width="295"
           />
         </figure>
       </div>

@@ -19,6 +19,7 @@
               <img
                 :src="$urlFor(content.image.url).size(310)"
                 :alt="content.image.alt"
+                width="310"
               />
             </figure>
           </div>
