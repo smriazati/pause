@@ -270,7 +270,13 @@ input {
 }
 
 textarea {
+  background: $cloud;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  padding: 1ch;
   height: 150px;
+  @include pStyle;
 }
 
 .form-group {

@@ -104,6 +104,7 @@ footer.site-footer {
     .back-to-top {
       grid-area: btn;
       justify-self: end;
+      align-self: end;
       @media (max-width: $collapse-bp) {
         align-self: center;
       }

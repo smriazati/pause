@@ -31,7 +31,7 @@
 
     <div v-if="message" class="form-group flex-col">
       <label for="message">Message</label>
-      <input
+      <textarea
         name="message"
         id="message"
         v-model="messageInput"

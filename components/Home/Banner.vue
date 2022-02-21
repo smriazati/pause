@@ -121,7 +121,7 @@ export default {
 
 <style lang="scss">
 .home-banner {
-  min-height: 700px;
+  min-height: 650px;
   .text-wrapper {
     > *:not(:last-child) {
       margin-bottom: $m-spacer;
@@ -154,6 +154,7 @@ export default {
       @media (max-width: $collapse-bp) {
         display: flex;
         justify-content: center;
+        min-height: 260px;
       }
       figure {
         position: relative;

@@ -1,11 +1,11 @@
 <template>
-  <div class="page contained">
-    <div v-if="page" class="grid">
+  <div class="page-template grid contained">
+    <main v-if="page" class="content">
       <h1 class="headline section-title">{{ page.title }}</h1>
       <div v-if="page.content" class="content">
         <SanityContent :blocks="page.content" />
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -36,3 +36,26 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.page-template {
+  @include containerVertPadding;
+  .grid-fixed {
+    > .column:first-child {
+      grid-row: 1 / 2;
+      grid-column: 2 / span 10;
+    }
+  }
+  main {
+    h1 {
+      margin-bottom: $xl-spacer;
+    }
+    .content {
+      h2 {
+        @include pBigStyle;
+        margin-bottom: $s-spacer;
+      }
+    }
+  }
+}
+</style>

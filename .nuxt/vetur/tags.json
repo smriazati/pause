@@ -29,9 +29,6 @@
   "AboutPeriBanner": {
     "description": "Auto imported from components/About/PeriBanner.vue"
   },
-  "BookCalendlyEmbed": {
-    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
-  },
   "ContactFormNetlify": {
     "description": "Auto imported from components/Contact/FormNetlify.vue"
   },
@@ -40,6 +37,9 @@
   },
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
   },
   "FAQsAccordion": {
     "description": "Auto imported from components/FAQs/Accordion.vue"

@@ -38,7 +38,9 @@ export default {
       prefetch: true,
       preconnect: true,
       families: {
-          'Inter': true,
+          'Inter': {
+            wght: [400, 500]
+          }
       },
       display: 'swap'
   },

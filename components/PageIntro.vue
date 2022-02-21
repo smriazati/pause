@@ -1,20 +1,22 @@
 <template>
-  <div class="contained page-intro" ref="container">
-    <div v-if="content">
-      <div class="grid-fixed">
-        <div
-          class="column title-wrapper gsap-fade-in"
-          v-if="content.headline"
-          ref="headline"
-        >
-          <h1>{{ content.headline }}</h1>
-        </div>
-        <div
-          v-if="content.subheadline"
-          class="column text-wrapper gsap-fade-in"
-          ref="text"
-        >
-          <SanityContent :blocks="content.subheadline" />
+  <div class="page-intro-wrapper">
+    <div class="contained page-intro" ref="container">
+      <div v-if="content">
+        <div class="grid-fixed">
+          <div
+            class="column title-wrapper gsap-fade-in"
+            v-if="content.headline"
+            ref="headline"
+          >
+            <h1>{{ content.headline }}</h1>
+          </div>
+          <div
+            v-if="content.subheadline"
+            class="column text-wrapper gsap-fade-in"
+            ref="text"
+          >
+            <SanityContent :blocks="content.subheadline" />
+          </div>
         </div>
       </div>
     </div>
@@ -84,6 +86,9 @@ export default {
 </script>
 
 <style lang="scss">
+.page-intro-wrapper {
+  border-bottom: 1px solid $cloud;
+}
 .page-intro {
   @include containerVertPadding;
   min-height: 500px;

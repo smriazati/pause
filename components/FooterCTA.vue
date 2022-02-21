@@ -83,7 +83,9 @@ export default {
 
 <style lang="scss">
 .footer-cta {
-  background: $cloud;
+  // background: $cloud;
+  border-top: 1px solid $cloud;
+
   @media (min-width: $collapse-bp) {
     min-height: 90vh;
   }
