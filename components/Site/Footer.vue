@@ -47,6 +47,9 @@ export default {
 <style lang="scss">
 footer.site-footer {
   background: white;
+  a {
+    font-weight: 400;
+  }
   .wrapper {
     display: grid;
     @media (min-width: $collapse-bp) {

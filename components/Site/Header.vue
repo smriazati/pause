@@ -125,6 +125,7 @@ export default {
                 transition: $transition;
                 display: flex;
                 position: relative;
+                font-weight: 400;
                 // &.active,
                 &:hover {
                   border-bottom: none;
