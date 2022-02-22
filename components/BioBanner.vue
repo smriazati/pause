@@ -65,7 +65,7 @@ export default {
   padding: $xxxl-spacer 0 $l-spacer 0;
   overflow: hidden;
   @media (max-width: $collapse-bp) {
-    padding: $m-spacer 0;
+    padding: $l-spacer 0 $m-spacer 0;
   }
   .grid-fixed {
     > .column:first-child {
@@ -83,7 +83,7 @@ export default {
   .text-wrapper {
     place-self: center;
     h3 {
-      margin-bottom: $m-spacer;
+      margin-bottom: 2rem;
     }
     p {
       margin-bottom: $s-spacer;
@@ -99,8 +99,8 @@ export default {
     @media (max-width: $collapse-bp) {
       align-self: flex-end;
       clip-path: circle(50%);
-      width: 35vh;
-      height: 35vh;
+      width: 30vh;
+      height: 30vh;
       transform: translateX(25%);
       * {
         height: 100%;

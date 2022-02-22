@@ -38,7 +38,7 @@ export default {
 .about.page-wrapper {
   @media (max-width: $collapse-bp) {
     .banner-section {
-      margin-top: -35vh;
+      margin-top: -40vh;
     }
     .bio-section {
       margin-top: -25vh;

@@ -304,4 +304,11 @@ textarea {
   mask-image: url("../icons/blob.svg");
   mask-repeat: no-repeat;
   mask-size: contain;
+
+  @media (max-width: $collapse-bp) {
+    mask-size: cover;
+    mask-position: center center;
+    width: 123%;
+    margin-left: -12% !important;
+  }
 }

@@ -34,6 +34,9 @@
         <nav class="collapse-area">
           <ul class="flex-col">
             <li @click="toggleMenu">
+              <nuxt-link to="/">Home</nuxt-link>
+            </li>
+            <li @click="toggleMenu">
               <nuxt-link to="/about">About</nuxt-link>
             </li>
             <li @click="toggleMenu">
@@ -59,7 +62,11 @@
         </nuxt-link>
       </h1>
 
-      <nuxt-link to="/book" class="btn primary"><span> Book</span> </nuxt-link>
+      <nav class="book-btn">
+        <nuxt-link to="/book" class="btn primary"
+          ><span> Book</span>
+        </nuxt-link>
+      </nav>
     </div>
   </header>
 </template>
@@ -166,6 +173,19 @@ export default {
       width: 100%;
       align-items: center;
       padding: 15px 0;
+      .nav-wrapper,
+      .book-btn {
+        flex: 1;
+      }
+      h1 {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+      }
+      .book-btn {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
 
     .menu-toggle {
@@ -196,10 +216,10 @@ export default {
       // display: none;
       position: fixed;
       height: 100%;
-      background: rgba($periwinkle, 0.9);
+      background: $periwinkle;
       top: 0;
       left: 0;
-      width: 80%;
+      width: 66%;
       z-index: 11;
       display: flex;
       flex-direction: column;
@@ -208,11 +228,12 @@ export default {
       transform: translateX(-100vw);
       transition: 0.3s ease all;
       li {
-        padding: 4px 0;
+        padding: 1rem 0;
       }
       a {
         font-size: 24px;
         line-height: 32px;
+        font-weight: 400;
       }
     }
     .collapsed {

@@ -154,7 +154,7 @@ export default {
       @media (max-width: $collapse-bp) {
         display: flex;
         justify-content: center;
-        min-height: 260px;
+        min-height: 150px;
       }
       figure {
         position: relative;

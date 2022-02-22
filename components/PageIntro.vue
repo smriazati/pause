@@ -102,6 +102,13 @@ export default {
       grid-column: 6 / span 7;
     }
 
+    .title-wrapper {
+      h1 {
+        @media (max-width: $collapse-bp) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
     .text-wrapper {
       p {
         @include pBigStyle;

@@ -124,6 +124,9 @@ export default {
           text-align: center;
           background: $eggplant;
           padding: 87px;
+          @media (max-width: $collapse-bp) {
+            padding: 50px;
+          }
         }
       }
       &:first-child {
@@ -171,6 +174,9 @@ export default {
       border-bottom: 1px solid $poppy;
       // height: 30px;
       transform: rotate(-90deg);
+      @media (max-width: $collapse-bp) {
+        transform: rotate(-90deg) translateX(-147px);
+      }
       clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
     }
   }
@@ -190,8 +196,8 @@ export default {
 @media (max-width: $collapse-bp) {
   .horizontal-banner {
     h2 {
-      font-size: 30px;
-      line-height: 36px;
+      font-size: 36px;
+      line-height: 40px;
     }
     p {
       font-size: 18px;
