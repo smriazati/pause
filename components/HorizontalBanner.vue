@@ -44,16 +44,6 @@ export default {
   data: () => ({
     content: null,
   }),
-  // watch: {
-  //   content() {
-  //     if (this.content) {
-  //       if (this.content.panels) {
-  //         // this.setAnim();
-  //         console.log(this.content.panels);
-  //       }
-  //     }
-  //   },
-  // },
   updated() {
     this.setAnim();
   },
@@ -70,6 +60,17 @@ export default {
         return;
       }
       // console.log(panels, panelsContainer);
+
+      let startTriggerStr;
+      const endTriggerOffset = window.innerHeight / 2;
+      if (window.innerWidth > 960) {
+        // desktop
+        startTriggerStr = "top top";
+        endTriggerOffset = 0;
+      } else {
+        // mobile
+        startTriggerStr = `top+=${endTriggerOffset}px top+=${endTriggerOffset}px`;
+      }
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
@@ -77,14 +78,16 @@ export default {
           trigger: panelsContainer,
           pin: true,
           // markers: true,
-          start: "top top",
+          start: startTriggerStr,
           scrub: 1,
           // snap: {
           //   snapTo: 1 / (panels.length - 1),
           //   inertia: false,
           //   duration: { min: 0.1, max: 0.1 },
           // },
-          end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
+          end: () =>
+            "+=" +
+            (panelsContainer.offsetWidth - innerWidth + endTriggerOffset),
         },
       });
     },
@@ -146,6 +149,7 @@ export default {
     overflow: hidden;
     @media (max-width: $collapse-bp) {
       width: 75%;
+      height: unset;
     }
     * {
       position: relative;
