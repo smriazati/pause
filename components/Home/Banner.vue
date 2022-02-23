@@ -155,6 +155,8 @@ export default {
         display: flex;
         justify-content: center;
         min-height: 150px;
+        width: 150%;
+        margin-left: -25%;
       }
       figure {
         position: relative;
@@ -162,11 +164,17 @@ export default {
       figure:first-child {
         grid-row: 1 / 3;
         grid-column: 1 / 4;
+        @media (max-width: $collapse-bp) {
+          justify-content: center;
+          align-items: center;
+        }
       }
       figure:last-child {
         grid-row: 2 / 4;
         grid-column: 2 / 5;
-        padding-left: 1rem;
+        @media (min-width: $collapse-bp) {
+          padding-left: 1rem;
+        }
       }
       .line {
         border-left: 1px solid $eggplant;
@@ -174,6 +182,9 @@ export default {
         grid-row: 1 / 4;
         margin-top: 100px;
         height: 0;
+        @media (max-width: $collapse-bp) {
+          display: none;
+        }
       }
     }
   }
