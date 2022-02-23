@@ -17,13 +17,13 @@ export { default as FAQsAccordionItem } from '../../components/FAQs/AccordionIte
 export { default as FAQsAccordionShort } from '../../components/FAQs/AccordionShort.vue'
 export { default as HomeBanner } from '../../components/Home/Banner.vue'
 export { default as HomeCTA } from '../../components/Home/CTA.vue'
-export { default as TestimonialsGrid } from '../../components/Testimonials/Grid.vue'
-export { default as TestimonialsSlider } from '../../components/Testimonials/Slider.vue'
 export { default as SiteFooter } from '../../components/Site/Footer.vue'
 export { default as SiteFooterMsg } from '../../components/Site/FooterMsg.vue'
 export { default as SiteHeader } from '../../components/Site/Header.vue'
 export { default as SiteLogo } from '../../components/Site/Logo.vue'
 export { default as SiteSubmark } from '../../components/Site/Submark.vue'
+export { default as TestimonialsGrid } from '../../components/Testimonials/Grid.vue'
+export { default as TestimonialsSlider } from '../../components/Testimonials/Slider.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

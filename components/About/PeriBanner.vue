@@ -53,6 +53,11 @@ export default {
         margin-top: $m-spacer;
       }
     }
+    h2.h3 {
+      @media (max-width: $collapse-bp) {
+        @include h2Style;
+      }
+    }
   }
 }
 </style>
