@@ -62,7 +62,7 @@ export default {
       // console.log(panels, panelsContainer);
 
       let startTriggerStr;
-      const endTriggerOffset = window.innerHeight / 2;
+      let endTriggerOffset = window.innerHeight / 2;
       if (window.innerWidth > 960) {
         // desktop
         startTriggerStr = "top top";
