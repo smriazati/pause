@@ -15,8 +15,8 @@
 import { groq } from "@nuxtjs/sanity";
 const query = groq`*[_type == "siteSettings"]{
     "submark": {
-        "url": favicon.asset->url,
-        "alt": favicon.asset->altText
+        "url": submark.image.asset->url,
+        "alt": submark.image.asset->altText
     }
 }[0]`;
 export default {

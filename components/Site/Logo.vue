@@ -15,8 +15,8 @@
 import { groq } from "@nuxtjs/sanity";
 const query = groq`*[_type == "siteSettings"]{
     "logo": {
-        "url": siteLogo.asset->url,
-        "alt": siteLogo.asset->altText
+        "url": siteLogo.image.asset->url,
+        "alt": siteLogo.image.asset->altText
     }
 }[0]`;
 export default {
