@@ -157,6 +157,7 @@ export default {
         min-height: 150px;
         width: 150%;
         margin-left: -25%;
+        overflow: hidden;
       }
       figure {
         position: relative;
