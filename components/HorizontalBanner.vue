@@ -69,7 +69,9 @@ export default {
         endTriggerOffset = 0;
       } else {
         // mobile
-        startTriggerStr = `top+=${endTriggerOffset}px top+=${endTriggerOffset}px`;
+        // startTriggerStr = `top+=${endTriggerOffset}px top+=${endTriggerOffset}px`;
+        startTriggerStr = `top+=${0}px topp+=${32}px`;
+        endTriggerOffset = 32;
       }
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
@@ -77,9 +79,11 @@ export default {
         scrollTrigger: {
           trigger: panelsContainer,
           pin: true,
+          anticipatePin: 1,
+          // pinSpacing: "margin",
           // markers: true,
           start: startTriggerStr,
-          scrub: 1,
+          scrub: true,
           // snap: {
           //   snapTo: 1 / (panels.length - 1),
           //   inertia: false,
@@ -149,7 +153,7 @@ export default {
     overflow: hidden;
     @media (max-width: $collapse-bp) {
       width: 75%;
-      height: unset;
+      // height: unset;
     }
     * {
       position: relative;

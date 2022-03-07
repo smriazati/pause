@@ -23,15 +23,6 @@
   "PageIntro": {
     "description": "Auto imported from components/PageIntro.vue"
   },
-  "AboutIntro": {
-    "description": "Auto imported from components/About/Intro.vue"
-  },
-  "AboutPeriBanner": {
-    "description": "Auto imported from components/About/PeriBanner.vue"
-  },
-  "BookCalendlyEmbed": {
-    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
-  },
   "ContactFormNetlify": {
     "description": "Auto imported from components/Contact/FormNetlify.vue"
   },
@@ -41,20 +32,20 @@
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
   },
-  "FAQsAccordion": {
-    "description": "Auto imported from components/FAQs/Accordion.vue"
+  "AboutIntro": {
+    "description": "Auto imported from components/About/Intro.vue"
   },
-  "FAQsAccordionItem": {
-    "description": "Auto imported from components/FAQs/AccordionItem.vue"
-  },
-  "FAQsAccordionShort": {
-    "description": "Auto imported from components/FAQs/AccordionShort.vue"
+  "AboutPeriBanner": {
+    "description": "Auto imported from components/About/PeriBanner.vue"
   },
   "HomeBanner": {
     "description": "Auto imported from components/Home/Banner.vue"
   },
   "HomeCTA": {
     "description": "Auto imported from components/Home/CTA.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
   },
   "SiteFooter": {
     "description": "Auto imported from components/Site/Footer.vue"
@@ -76,5 +67,14 @@
   },
   "TestimonialsSlider": {
     "description": "Auto imported from components/Testimonials/Slider.vue"
+  },
+  "FAQsAccordion": {
+    "description": "Auto imported from components/FAQs/Accordion.vue"
+  },
+  "FAQsAccordionItem": {
+    "description": "Auto imported from components/FAQs/AccordionItem.vue"
+  },
+  "FAQsAccordionShort": {
+    "description": "Auto imported from components/FAQs/AccordionShort.vue"
   }
 }
