@@ -28,6 +28,16 @@ return {
             property: 'og:image',
             content: `${siteSettings?.ogImg?.url}?h=1200&w=640`
           },
+          {
+            hid: 'og:image:width',
+            property: 'og:image:width',
+            content: `640`
+          },
+          {
+            hid: 'og:image:height',
+            property: 'og:image:height',
+            content: `1200`
+          },
           { hid: 'og:image:alt', property: 'og:image:alt',  content: `${siteSettings?.ogImg?.alt}`}
         ],
         link: [

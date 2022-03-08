@@ -182,6 +182,9 @@ export default {
         display: flex;
         justify-content: center;
       }
+      a:hover {
+        border-bottom-color: transparent;
+      }
       .book-btn {
         display: flex;
         justify-content: flex-end;
