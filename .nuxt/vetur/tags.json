@@ -35,21 +35,6 @@
   "BookCalendlyEmbed": {
     "description": "Auto imported from components/Book/CalendlyEmbed.vue"
   },
-  "HomeBanner": {
-    "description": "Auto imported from components/Home/Banner.vue"
-  },
-  "HomeCTA": {
-    "description": "Auto imported from components/Home/CTA.vue"
-  },
-  "FAQsAccordion": {
-    "description": "Auto imported from components/FAQs/Accordion.vue"
-  },
-  "FAQsAccordionItem": {
-    "description": "Auto imported from components/FAQs/AccordionItem.vue"
-  },
-  "FAQsAccordionShort": {
-    "description": "Auto imported from components/FAQs/AccordionShort.vue"
-  },
   "AboutIntro": {
     "description": "Auto imported from components/About/Intro.vue"
   },
@@ -71,10 +56,25 @@
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
   },
+  "HomeBanner": {
+    "description": "Auto imported from components/Home/Banner.vue"
+  },
+  "HomeCTA": {
+    "description": "Auto imported from components/Home/CTA.vue"
+  },
   "TestimonialsGrid": {
     "description": "Auto imported from components/Testimonials/Grid.vue"
   },
   "TestimonialsSlider": {
     "description": "Auto imported from components/Testimonials/Slider.vue"
+  },
+  "FAQsAccordion": {
+    "description": "Auto imported from components/FAQs/Accordion.vue"
+  },
+  "FAQsAccordionItem": {
+    "description": "Auto imported from components/FAQs/AccordionItem.vue"
+  },
+  "FAQsAccordionShort": {
+    "description": "Auto imported from components/FAQs/AccordionShort.vue"
   }
 }
