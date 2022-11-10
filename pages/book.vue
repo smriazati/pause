@@ -5,16 +5,16 @@
         <PageIntro :schemaType="schemaType" />
       </header>
       <section>
-        <CalendlyEmbed />
+        <BookingEmbed />
       </section>
     </main>
   </div>
 </template>
 
 <script>
-import CalendlyEmbed from "../components/Book/CalendlyEmbed.vue";
+import BookingEmbed from "../components/Book/BookingEmbed.vue";
 export default {
-  components: { CalendlyEmbed },
+  components: { BookingEmbed },
   data() {
     return {
       name: "Book",

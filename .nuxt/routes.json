@@ -2,64 +2,55 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/sarah/Sites/pause/app/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_5570e6a8"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/about.vue",
+    "chunkName": "pages/about"
   },
   {
     "name": "book",
     "path": "/book",
-    "component": "/Users/sarah/Sites/pause/app/pages/book.vue",
-    "chunkName": "pages/book",
-    "_name": "_bc2e61cc"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/book.vue",
+    "chunkName": "pages/book"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/Users/sarah/Sites/pause/app/pages/contact/index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_7c149d7c"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/contact/index.vue",
+    "chunkName": "pages/contact/index"
   },
   {
     "name": "faqs",
     "path": "/faqs",
-    "component": "/Users/sarah/Sites/pause/app/pages/faqs.vue",
-    "chunkName": "pages/faqs",
-    "_name": "_60b0b24e"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/faqs.vue",
+    "chunkName": "pages/faqs"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "/Users/sarah/Sites/pause/app/pages/services.vue",
-    "chunkName": "pages/services",
-    "_name": "_a941a4e2"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/services.vue",
+    "chunkName": "pages/services"
   },
   {
     "name": "testimonials",
     "path": "/testimonials",
-    "component": "/Users/sarah/Sites/pause/app/pages/testimonials.vue",
-    "chunkName": "pages/testimonials",
-    "_name": "_4e437d65"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/testimonials.vue",
+    "chunkName": "pages/testimonials"
   },
   {
     "name": "contact-success",
     "path": "/contact/success",
-    "component": "/Users/sarah/Sites/pause/app/pages/contact/success.vue",
-    "chunkName": "pages/contact/success",
-    "_name": "_82d31c1a"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/contact/success.vue",
+    "chunkName": "pages/contact/success"
   },
   {
     "name": "page-id",
     "path": "/page/:id?",
-    "component": "/Users/sarah/Sites/pause/app/pages/page/_id.vue",
-    "chunkName": "pages/page/_id",
-    "_name": "_db31bd2a"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/page/_id.vue",
+    "chunkName": "pages/page/_id"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/sarah/Sites/pause/app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1601311e"
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]

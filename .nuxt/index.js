@@ -12,9 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_8eeef712 from 'nuxt_plugin_plugin_8eeef712' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_gsapModule_509b6364 from 'nuxt_plugin_gsapModule_509b6364' // Source: ./gsapModule.js (mode: 'all')
-import nuxt_plugin_plugin_8a51dba2 from 'nuxt_plugin_plugin_8a51dba2' // Source: ./sanity/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_131f472b from 'nuxt_plugin_plugin_131f472b' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_gsapModule_be38f9a0 from 'nuxt_plugin_gsapModule_be38f9a0' // Source: ./gsapModule.js (mode: 'all')
+import nuxt_plugin_plugin_34034ee3 from 'nuxt_plugin_plugin_34034ee3' // Source: ./sanity/plugin.js (mode: 'all')
 import nuxt_plugin_sanityimagebuilder_52b85717 from 'nuxt_plugin_sanityimagebuilder_52b85717' // Source: ../plugins/sanity-image-builder.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -179,16 +179,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_8eeef712 === 'function') {
-    await nuxt_plugin_plugin_8eeef712(app.context, inject)
+  if (typeof nuxt_plugin_plugin_131f472b === 'function') {
+    await nuxt_plugin_plugin_131f472b(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_gsapModule_509b6364 === 'function') {
-    await nuxt_plugin_gsapModule_509b6364(app.context, inject)
+  if (typeof nuxt_plugin_gsapModule_be38f9a0 === 'function') {
+    await nuxt_plugin_gsapModule_be38f9a0(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_8a51dba2 === 'function') {
-    await nuxt_plugin_plugin_8a51dba2(app.context, inject)
+  if (typeof nuxt_plugin_plugin_34034ee3 === 'function') {
+    await nuxt_plugin_plugin_34034ee3(app.context, inject)
   }
 
   if (typeof nuxt_plugin_sanityimagebuilder_52b85717 === 'function') {
