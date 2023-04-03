@@ -78,6 +78,7 @@ export default {
 
     .flex-row {
         align-items: center;
+        justify-content: center;
 
         a {
             margin: 12px;
