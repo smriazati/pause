@@ -11,6 +11,7 @@ const _3a2239fc = () => interopDefault(import('../pages/faqs.vue' /* webpackChun
 const _e624377a = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _71208bce = () => interopDefault(import('../pages/testimonials.vue' /* webpackChunkName: "pages/testimonials" */))
 const _7cfaee82 = () => interopDefault(import('../pages/contact/success.vue' /* webpackChunkName: "pages/contact/success" */))
+const _43f9315c = () => interopDefault(import('../pages/file/_slug.vue' /* webpackChunkName: "pages/file/_slug" */))
 const _73f5d81f = () => interopDefault(import('../pages/page/_id.vue' /* webpackChunkName: "pages/page/_id" */))
 const _8af16586 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -53,6 +54,10 @@ export const routerOptions = {
     path: "/contact/success",
     component: _7cfaee82,
     name: "contact-success"
+  }, {
+    path: "/file/:slug?",
+    component: _43f9315c,
+    name: "file-slug"
   }, {
     path: "/page/:id?",
     component: _73f5d81f,

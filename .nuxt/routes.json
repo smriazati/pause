@@ -3,54 +3,70 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_ca611b10"
   },
   {
     "name": "book",
     "path": "/book",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/book.vue",
-    "chunkName": "pages/book"
+    "chunkName": "pages/book",
+    "_name": "_2426ffce"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/contact/index.vue",
-    "chunkName": "pages/contact/index"
+    "chunkName": "pages/contact/index",
+    "_name": "_6e510b0e"
   },
   {
     "name": "faqs",
     "path": "/faqs",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/faqs.vue",
-    "chunkName": "pages/faqs"
+    "chunkName": "pages/faqs",
+    "_name": "_3a2239fc"
   },
   {
     "name": "services",
     "path": "/services",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/services.vue",
-    "chunkName": "pages/services"
+    "chunkName": "pages/services",
+    "_name": "_e624377a"
   },
   {
     "name": "testimonials",
     "path": "/testimonials",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/testimonials.vue",
-    "chunkName": "pages/testimonials"
+    "chunkName": "pages/testimonials",
+    "_name": "_71208bce"
   },
   {
     "name": "contact-success",
     "path": "/contact/success",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/contact/success.vue",
-    "chunkName": "pages/contact/success"
+    "chunkName": "pages/contact/success",
+    "_name": "_7cfaee82"
+  },
+  {
+    "name": "file-slug",
+    "path": "/file/:slug?",
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/file/_slug.vue",
+    "chunkName": "pages/file/_slug",
+    "_name": "_43f9315c"
   },
   {
     "name": "page-id",
     "path": "/page/:id?",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/page/_id.vue",
-    "chunkName": "pages/page/_id"
+    "chunkName": "pages/page/_id",
+    "_name": "_73f5d81f"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_8af16586"
   }
 ]

@@ -44,6 +44,15 @@
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
   },
+  "FAQsAccordion": {
+    "description": "Auto imported from components/FAQs/Accordion.vue"
+  },
+  "FAQsAccordionItem": {
+    "description": "Auto imported from components/FAQs/AccordionItem.vue"
+  },
+  "FAQsAccordionShort": {
+    "description": "Auto imported from components/FAQs/AccordionShort.vue"
+  },
   "HomeBanner": {
     "description": "Auto imported from components/Home/Banner.vue"
   },
@@ -64,15 +73,6 @@
   },
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
-  },
-  "FAQsAccordion": {
-    "description": "Auto imported from components/FAQs/Accordion.vue"
-  },
-  "FAQsAccordionItem": {
-    "description": "Auto imported from components/FAQs/AccordionItem.vue"
-  },
-  "FAQsAccordionShort": {
-    "description": "Auto imported from components/FAQs/AccordionShort.vue"
   },
   "TestimonialsGrid": {
     "description": "Auto imported from components/Testimonials/Grid.vue"

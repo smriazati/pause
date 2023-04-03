@@ -1,8 +1,8 @@
-@use 'fonts'as *;
-@use 'system/_colors.scss'as *;
-@use 'system/_typography.scss'as *;
-@use 'system/_layout.scss'as *;
-@use 'system/_buttons.scss'as *;
+@use 'fonts' as *;
+@use 'system/_colors.scss' as *;
+@use 'system/_typography.scss' as *;
+@use 'system/_layout.scss' as *;
+@use 'system/_buttons.scss' as *;
 
 /* resets  */
 
@@ -306,9 +306,14 @@ textarea {
   mask-size: contain;
 
   @media (max-width: $collapse-bp) {
-    mask-size: cover;
+    // mask-size: cover;
     mask-position: center center;
     width: 123%;
-    margin-left: -12% !important;
+    // margin-left: -12% !important;
   }
+}
+
+
+.text-center {
+  text-align: center;
 }
