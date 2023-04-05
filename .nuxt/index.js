@@ -16,6 +16,7 @@ import nuxt_plugin_plugin_131f472b from 'nuxt_plugin_plugin_131f472b' // Source:
 import nuxt_plugin_gsapModule_be38f9a0 from 'nuxt_plugin_gsapModule_be38f9a0' // Source: ./gsapModule.js (mode: 'all')
 import nuxt_plugin_plugin_34034ee3 from 'nuxt_plugin_plugin_34034ee3' // Source: ./sanity/plugin.js (mode: 'all')
 import nuxt_plugin_sanityimagebuilder_52b85717 from 'nuxt_plugin_sanityimagebuilder_52b85717' // Source: ../plugins/sanity-image-builder.js (mode: 'all')
+import nuxt_plugin_youtubeclient_7a41dc8b from 'nuxt_plugin_youtubeclient_7a41dc8b' // Source: ../plugins/youtube.client.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -193,6 +194,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_sanityimagebuilder_52b85717 === 'function') {
     await nuxt_plugin_sanityimagebuilder_52b85717(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_youtubeclient_7a41dc8b === 'function') {
+    await nuxt_plugin_youtubeclient_7a41dc8b(app.context, inject)
   }
 
   // Lock enablePreview in context

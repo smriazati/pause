@@ -63,6 +63,13 @@
     "_name": "_73f5d81f"
   },
   {
+    "name": "posts-id",
+    "path": "/posts/:id?",
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/posts/_id.vue",
+    "chunkName": "pages/posts/_id",
+    "_name": "_b84d132e"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/index.vue",

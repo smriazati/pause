@@ -45,7 +45,7 @@ export default async () => {
       ],
     },
     css: ['~/assets/sass/main.scss'],
-    plugins: ['~/plugins/sanity-image-builder.js'],
+    plugins: ['~/plugins/sanity-image-builder.js', '~/plugins/youtube.client.js'],
     components: true,
     buildModules: [
       '@nuxtjs/google-fonts', '@nuxtjs/sanity/module', 'nuxt-gsap-module', '@nuxtjs/style-resources',

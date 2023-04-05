@@ -13,6 +13,7 @@ const _71208bce = () => interopDefault(import('../pages/testimonials.vue' /* web
 const _7cfaee82 = () => interopDefault(import('../pages/contact/success.vue' /* webpackChunkName: "pages/contact/success" */))
 const _43f9315c = () => interopDefault(import('../pages/file/_slug.vue' /* webpackChunkName: "pages/file/_slug" */))
 const _73f5d81f = () => interopDefault(import('../pages/page/_id.vue' /* webpackChunkName: "pages/page/_id" */))
+const _b84d132e = () => interopDefault(import('../pages/posts/_id.vue' /* webpackChunkName: "pages/posts/_id" */))
 const _8af16586 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -62,6 +63,10 @@ export const routerOptions = {
     path: "/page/:id?",
     component: _73f5d81f,
     name: "page-id"
+  }, {
+    path: "/posts/:id?",
+    component: _b84d132e,
+    name: "posts-id"
   }, {
     path: "/",
     component: _8af16586,

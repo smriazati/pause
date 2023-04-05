@@ -44,6 +44,12 @@
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
   },
+  "HomeBanner": {
+    "description": "Auto imported from components/Home/Banner.vue"
+  },
+  "HomeCTA": {
+    "description": "Auto imported from components/Home/CTA.vue"
+  },
   "FAQsAccordion": {
     "description": "Auto imported from components/FAQs/Accordion.vue"
   },
@@ -53,11 +59,17 @@
   "FAQsAccordionShort": {
     "description": "Auto imported from components/FAQs/AccordionShort.vue"
   },
-  "HomeBanner": {
-    "description": "Auto imported from components/Home/Banner.vue"
+  "SerializersImageItem": {
+    "description": "Auto imported from components/Serializers/ImageItem.vue"
   },
-  "HomeCTA": {
-    "description": "Auto imported from components/Home/CTA.vue"
+  "SerializersYoutube": {
+    "description": "Auto imported from components/Serializers/Youtube.vue"
+  },
+  "TestimonialsGrid": {
+    "description": "Auto imported from components/Testimonials/Grid.vue"
+  },
+  "TestimonialsSlider": {
+    "description": "Auto imported from components/Testimonials/Slider.vue"
   },
   "SiteFooter": {
     "description": "Auto imported from components/Site/Footer.vue"
@@ -73,11 +85,5 @@
   },
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
-  },
-  "TestimonialsGrid": {
-    "description": "Auto imported from components/Testimonials/Grid.vue"
-  },
-  "TestimonialsSlider": {
-    "description": "Auto imported from components/Testimonials/Slider.vue"
   }
 }
