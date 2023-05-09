@@ -199,4 +199,5 @@ export default {
       line-height: 24px;
     }
   }
-}</style>
+}
+</style>

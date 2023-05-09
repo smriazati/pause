@@ -1,12 +1,10 @@
 <template>
     <div class="template-blog">
-        <div class="contained page-intro intro-wrapper">
-            <div class="grid-fixed">
-                <h2 class="h2">Lean into this moment of Pause, while we explore topics around menopause.</h2>
-            </div>
-        </div>
+        <header>
+            <BlogPageIntro></BlogPageIntro>
+        </header>
         <div class="featured-posts-wrapper">
-            <FeaturedPosts :posts="featured"></FeaturedPosts>
+            <BlogFeaturedPosts :posts="featured"></BlogFeaturedPosts>
         </div>
 
         <div class="post-list-wrapper contained">

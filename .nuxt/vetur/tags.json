@@ -14,9 +14,6 @@
   "CustomButton": {
     "description": "Auto imported from components/CustomButton.vue"
   },
-  "FeaturedPosts": {
-    "description": "Auto imported from components/FeaturedPosts.vue"
-  },
   "FooterCTA": {
     "description": "Auto imported from components/FooterCTA.vue"
   },
@@ -31,6 +28,12 @@
   },
   "AboutPeriBanner": {
     "description": "Auto imported from components/About/PeriBanner.vue"
+  },
+  "BlogFeaturedPosts": {
+    "description": "Auto imported from components/Blog/FeaturedPosts.vue"
+  },
+  "BlogPageIntro": {
+    "description": "Auto imported from components/Blog/PageIntro.vue"
   },
   "BookBookingEmbed": {
     "description": "Auto imported from components/Book/BookingEmbed.vue"
@@ -62,15 +65,6 @@
   "HomeCTA": {
     "description": "Auto imported from components/Home/CTA.vue"
   },
-  "SerializersImageItem": {
-    "description": "Auto imported from components/Serializers/ImageItem.vue"
-  },
-  "SerializersLink": {
-    "description": "Auto imported from components/Serializers/Link.vue"
-  },
-  "SerializersYoutube": {
-    "description": "Auto imported from components/Serializers/Youtube.vue"
-  },
   "SiteFooter": {
     "description": "Auto imported from components/Site/Footer.vue"
   },
@@ -85,6 +79,15 @@
   },
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
+  },
+  "SerializersImageItem": {
+    "description": "Auto imported from components/Serializers/ImageItem.vue"
+  },
+  "SerializersLink": {
+    "description": "Auto imported from components/Serializers/Link.vue"
+  },
+  "SerializersYoutube": {
+    "description": "Auto imported from components/Serializers/Youtube.vue"
   },
   "TestimonialsGrid": {
     "description": "Auto imported from components/Testimonials/Grid.vue"
