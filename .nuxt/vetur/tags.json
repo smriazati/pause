@@ -14,6 +14,9 @@
   "CustomButton": {
     "description": "Auto imported from components/CustomButton.vue"
   },
+  "FeaturedPosts": {
+    "description": "Auto imported from components/FeaturedPosts.vue"
+  },
   "FooterCTA": {
     "description": "Auto imported from components/FooterCTA.vue"
   },
@@ -22,18 +25,6 @@
   },
   "PageIntro": {
     "description": "Auto imported from components/PageIntro.vue"
-  },
-  "AboutIntro": {
-    "description": "Auto imported from components/About/Intro.vue"
-  },
-  "AboutPeriBanner": {
-    "description": "Auto imported from components/About/PeriBanner.vue"
-  },
-  "BookBookingEmbed": {
-    "description": "Auto imported from components/Book/BookingEmbed.vue"
-  },
-  "BookCalendlyEmbed": {
-    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
   },
   "ContactFormNetlify": {
     "description": "Auto imported from components/Contact/FormNetlify.vue"
@@ -44,11 +35,32 @@
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
   },
+  "BookBookingEmbed": {
+    "description": "Auto imported from components/Book/BookingEmbed.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
+  },
   "HomeBanner": {
     "description": "Auto imported from components/Home/Banner.vue"
   },
   "HomeCTA": {
     "description": "Auto imported from components/Home/CTA.vue"
+  },
+  "AboutIntro": {
+    "description": "Auto imported from components/About/Intro.vue"
+  },
+  "AboutPeriBanner": {
+    "description": "Auto imported from components/About/PeriBanner.vue"
+  },
+  "SerializersImageItem": {
+    "description": "Auto imported from components/Serializers/ImageItem.vue"
+  },
+  "SerializersLink": {
+    "description": "Auto imported from components/Serializers/Link.vue"
+  },
+  "SerializersYoutube": {
+    "description": "Auto imported from components/Serializers/Youtube.vue"
   },
   "FAQsAccordion": {
     "description": "Auto imported from components/FAQs/Accordion.vue"
@@ -58,18 +70,6 @@
   },
   "FAQsAccordionShort": {
     "description": "Auto imported from components/FAQs/AccordionShort.vue"
-  },
-  "SerializersImageItem": {
-    "description": "Auto imported from components/Serializers/ImageItem.vue"
-  },
-  "SerializersYoutube": {
-    "description": "Auto imported from components/Serializers/Youtube.vue"
-  },
-  "TestimonialsGrid": {
-    "description": "Auto imported from components/Testimonials/Grid.vue"
-  },
-  "TestimonialsSlider": {
-    "description": "Auto imported from components/Testimonials/Slider.vue"
   },
   "SiteFooter": {
     "description": "Auto imported from components/Site/Footer.vue"
@@ -85,5 +85,11 @@
   },
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
+  },
+  "TestimonialsGrid": {
+    "description": "Auto imported from components/Testimonials/Grid.vue"
+  },
+  "TestimonialsSlider": {
+    "description": "Auto imported from components/Testimonials/Slider.vue"
   }
 }

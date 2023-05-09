@@ -2,12 +2,7 @@
   <div class="horizontal-banner">
     <div v-if="content">
       <div v-if="content.panels" class="panels-wrapper" ref="panelsContainer">
-        <div
-          v-for="(item, index) in content.panels"
-          :key="item._key"
-          class="panel"
-          ref="panel"
-        >
+        <div v-for="(item, index) in content.panels" :key="item._key" class="panel" ref="panel">
           <div class="contained grid-fixed">
             <div class="text-wrapper">
               <div v-if="index > 0" class="counter">
@@ -36,8 +31,8 @@ export default {
   },
   async fetch() {
     const query = groq`*[_type == "${this.schemaType}"]{
- "panels" : horizontalBanner.panels 
-}[0]`;
+      "panels" : horizontalBanner.panels 
+    }[0]`;
     this.content = await this.$sanity.fetch(query);
   },
   fetchOnServer: false,
@@ -96,6 +91,7 @@ export default {
     flex-wrap: nowrap;
     padding: 0;
     overflow: hidden;
+
     .panel {
       position: relative;
       display: flex;
@@ -103,17 +99,20 @@ export default {
       height: 100vh;
       overflow: hidden;
       align-items: center;
+
       .grid-fixed {
         .text-wrapper {
           grid-column: 3 / span 8;
           text-align: center;
           background: $eggplant;
           padding: 87px;
+
           @media (max-width: $collapse-bp) {
             padding: 50px;
           }
         }
       }
+
       &:first-child {
         .grid-fixed {
           .text-wrapper {
@@ -129,14 +128,17 @@ export default {
   .panel {
     position: relative;
     overflow: hidden;
+
     @media (max-width: $collapse-bp) {
       width: 75%;
       // height: unset;
     }
+
     * {
       position: relative;
       z-index: 8;
     }
+
     &:before {
       content: " ";
       display: flex;
@@ -145,12 +147,15 @@ export default {
       border-bottom: 1px solid $poppy;
       z-index: 5;
     }
+
     &:first-child:before {
       clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
     }
+
     &:last-child:before {
       clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
     }
+
     &:last-child:after {
       content: " ";
       display: flex;
@@ -160,9 +165,11 @@ export default {
       border-bottom: 1px solid $poppy;
       // height: 30px;
       transform: rotate(-90deg);
+
       @media (max-width: $collapse-bp) {
         transform: rotate(-90deg) translateX(-147px);
       }
+
       clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
     }
   }
@@ -179,16 +186,17 @@ export default {
     margin-bottom: $s-spacer;
   }
 }
+
 @media (max-width: $collapse-bp) {
   .horizontal-banner {
     h2 {
       font-size: 36px;
       line-height: 40px;
     }
+
     p {
       font-size: 18px;
       line-height: 24px;
     }
   }
-}
-</style>
+}</style>

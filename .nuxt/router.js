@@ -5,15 +5,17 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _ca611b10 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _6abfd56c = () => interopDefault(import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */))
 const _2426ffce = () => interopDefault(import('../pages/book.vue' /* webpackChunkName: "pages/book" */))
 const _6e510b0e = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
 const _3a2239fc = () => interopDefault(import('../pages/faqs.vue' /* webpackChunkName: "pages/faqs" */))
 const _e624377a = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _71208bce = () => interopDefault(import('../pages/testimonials.vue' /* webpackChunkName: "pages/testimonials" */))
+const _5ec1c58c = () => interopDefault(import('../pages/blog/archive.vue' /* webpackChunkName: "pages/blog/archive" */))
 const _7cfaee82 = () => interopDefault(import('../pages/contact/success.vue' /* webpackChunkName: "pages/contact/success" */))
+const _38e6e232 = () => interopDefault(import('../pages/blog/_id.vue' /* webpackChunkName: "pages/blog/_id" */))
 const _43f9315c = () => interopDefault(import('../pages/file/_slug.vue' /* webpackChunkName: "pages/file/_slug" */))
 const _73f5d81f = () => interopDefault(import('../pages/page/_id.vue' /* webpackChunkName: "pages/page/_id" */))
-const _b84d132e = () => interopDefault(import('../pages/posts/_id.vue' /* webpackChunkName: "pages/posts/_id" */))
 const _8af16586 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -31,6 +33,10 @@ export const routerOptions = {
     path: "/about",
     component: _ca611b10,
     name: "about"
+  }, {
+    path: "/blog",
+    component: _6abfd56c,
+    name: "blog"
   }, {
     path: "/book",
     component: _2426ffce,
@@ -52,9 +58,17 @@ export const routerOptions = {
     component: _71208bce,
     name: "testimonials"
   }, {
+    path: "/blog/archive",
+    component: _5ec1c58c,
+    name: "blog-archive"
+  }, {
     path: "/contact/success",
     component: _7cfaee82,
     name: "contact-success"
+  }, {
+    path: "/blog/:id",
+    component: _38e6e232,
+    name: "blog-id"
   }, {
     path: "/file/:slug?",
     component: _43f9315c,
@@ -63,10 +77,6 @@ export const routerOptions = {
     path: "/page/:id?",
     component: _73f5d81f,
     name: "page-id"
-  }, {
-    path: "/posts/:id?",
-    component: _b84d132e,
-    name: "posts-id"
   }, {
     path: "/",
     component: _8af16586,
