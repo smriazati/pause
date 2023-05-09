@@ -19,7 +19,7 @@ import { groq } from "@nuxtjs/sanity";
 
 export default {
     async asyncData({ $sanity }) {
-        const query = groq`*[_type == "blogs"]|order(date asc)[0...9]{
+        const query = groq`*[_type == "blogs"]|order(date asc)[0...100]{
             title, slug,date, _id
         }`;
         const posts = await $sanity.fetch(query).then((res) => res);

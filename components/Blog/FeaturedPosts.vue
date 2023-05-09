@@ -35,22 +35,29 @@ export default {
             required: true,
         },
     },
+    beforeDestroy() {
+        if (typeof window !== "undefined") {
+            window.addEventListener("resize", this.onResize);
+        }
+    },
     mounted() {
         this.setAnim();
-        this.setTitlePosition();
         this.setProgressBar();
+        this.onResize();
+        window.addEventListener("resize", this.onResize);
     },
     updated() {
         this.setAnim();
-        this.setTitlePosition();
     },
     methods: {
+        onResize() {
+            this.setTitlePosition();
+        },
         setProgressBar() {
             const gsap = this.$gsap;
             const progressBar = this.$refs.progressBar;
             let panelsContainer = this.$refs.panelsContainer;
             const fg = progressBar?.querySelector('.progress-bar-fg');
-
             gsap.to(fg, {
                 width: `100%`,
                 ease: "none",
