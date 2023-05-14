@@ -36,6 +36,9 @@
               <nuxt-link to="/services">What to Expect</nuxt-link>
             </li>
             <li @click="toggleMenu">
+              <nuxt-link to="/blog">Blog</nuxt-link>
+            </li>
+            <li @click="toggleMenu">
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
             <li @click="toggleMenu">
@@ -302,4 +305,5 @@ export default {
       padding-bottom: 5vw;
     }
   }
-}</style>
+}
+</style>

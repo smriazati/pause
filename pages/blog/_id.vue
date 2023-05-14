@@ -160,6 +160,10 @@ export default {
         justify-content: space-between;
         padding-bottom: 245px;
 
+        @media (max-width: $collapse-bp) {
+            padding-bottom: 120px;
+        }
+
         >* {
             @include h3Style;
             font-size: 22px;
@@ -172,6 +176,7 @@ export default {
         }
 
         .next-button {
+            text-align: right;
             align-self: flex-end;
         }
     }

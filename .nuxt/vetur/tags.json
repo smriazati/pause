@@ -23,23 +23,14 @@
   "PageIntro": {
     "description": "Auto imported from components/PageIntro.vue"
   },
-  "AboutIntro": {
-    "description": "Auto imported from components/About/Intro.vue"
-  },
-  "AboutPeriBanner": {
-    "description": "Auto imported from components/About/PeriBanner.vue"
-  },
   "BlogFeaturedPosts": {
     "description": "Auto imported from components/Blog/FeaturedPosts.vue"
   },
+  "BlogFeaturedPosts2": {
+    "description": "Auto imported from components/Blog/FeaturedPosts2.vue"
+  },
   "BlogPageIntro": {
     "description": "Auto imported from components/Blog/PageIntro.vue"
-  },
-  "BookBookingEmbed": {
-    "description": "Auto imported from components/Book/BookingEmbed.vue"
-  },
-  "BookCalendlyEmbed": {
-    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
   },
   "ContactFormNetlify": {
     "description": "Auto imported from components/Contact/FormNetlify.vue"
@@ -49,6 +40,18 @@
   },
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
+  },
+  "BookBookingEmbed": {
+    "description": "Auto imported from components/Book/BookingEmbed.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
+  },
+  "AboutIntro": {
+    "description": "Auto imported from components/About/Intro.vue"
+  },
+  "AboutPeriBanner": {
+    "description": "Auto imported from components/About/PeriBanner.vue"
   },
   "FAQsAccordion": {
     "description": "Auto imported from components/FAQs/Accordion.vue"

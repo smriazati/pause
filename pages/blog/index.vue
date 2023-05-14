@@ -4,7 +4,7 @@
             <BlogPageIntro></BlogPageIntro>
         </header>
         <div class="featured-posts-wrapper">
-            <BlogFeaturedPosts :posts="featured"></BlogFeaturedPosts>
+            <BlogFeaturedPosts2 :posts="featured"></BlogFeaturedPosts2>
         </div>
 
         <div class="post-list-wrapper contained">
@@ -66,6 +66,9 @@ export default {
     }
 }
 
+.featured-posts-wrapper {
+    position: relative;
+}
 
 
 .post-list-wrapper {
