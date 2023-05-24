@@ -23,6 +23,12 @@
   "PageIntro": {
     "description": "Auto imported from components/PageIntro.vue"
   },
+  "AboutIntro": {
+    "description": "Auto imported from components/About/Intro.vue"
+  },
+  "AboutPeriBanner": {
+    "description": "Auto imported from components/About/PeriBanner.vue"
+  },
   "BlogFeaturedPosts": {
     "description": "Auto imported from components/Blog/FeaturedPosts.vue"
   },
@@ -32,6 +38,12 @@
   "BlogPageIntro": {
     "description": "Auto imported from components/Blog/PageIntro.vue"
   },
+  "BookBookingEmbed": {
+    "description": "Auto imported from components/Book/BookingEmbed.vue"
+  },
+  "BookCalendlyEmbed": {
+    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
+  },
   "ContactFormNetlify": {
     "description": "Auto imported from components/Contact/FormNetlify.vue"
   },
@@ -40,18 +52,6 @@
   },
   "ContactSecurityMsg": {
     "description": "Auto imported from components/Contact/SecurityMsg.vue"
-  },
-  "BookBookingEmbed": {
-    "description": "Auto imported from components/Book/BookingEmbed.vue"
-  },
-  "BookCalendlyEmbed": {
-    "description": "Auto imported from components/Book/CalendlyEmbed.vue"
-  },
-  "AboutIntro": {
-    "description": "Auto imported from components/About/Intro.vue"
-  },
-  "AboutPeriBanner": {
-    "description": "Auto imported from components/About/PeriBanner.vue"
   },
   "FAQsAccordion": {
     "description": "Auto imported from components/FAQs/Accordion.vue"
@@ -77,6 +77,12 @@
   "SerializersYoutube": {
     "description": "Auto imported from components/Serializers/Youtube.vue"
   },
+  "TestimonialsGrid": {
+    "description": "Auto imported from components/Testimonials/Grid.vue"
+  },
+  "TestimonialsSlider": {
+    "description": "Auto imported from components/Testimonials/Slider.vue"
+  },
   "SiteFooter": {
     "description": "Auto imported from components/Site/Footer.vue"
   },
@@ -91,11 +97,5 @@
   },
   "SiteSubmark": {
     "description": "Auto imported from components/Site/Submark.vue"
-  },
-  "TestimonialsGrid": {
-    "description": "Auto imported from components/Testimonials/Grid.vue"
-  },
-  "TestimonialsSlider": {
-    "description": "Auto imported from components/Testimonials/Slider.vue"
   }
 }
