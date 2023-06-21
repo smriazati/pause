@@ -7,6 +7,13 @@
     "_name": "_ca611b10"
   },
   {
+    "name": "blog",
+    "path": "/blog",
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/blog/index.vue",
+    "chunkName": "pages/blog/index",
+    "_name": "_6abfd56c"
+  },
+  {
     "name": "book",
     "path": "/book",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/book.vue",
@@ -42,11 +49,25 @@
     "_name": "_71208bce"
   },
   {
+    "name": "blog-archive",
+    "path": "/blog/archive",
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/blog/archive.vue",
+    "chunkName": "pages/blog/archive",
+    "_name": "_5ec1c58c"
+  },
+  {
     "name": "contact-success",
     "path": "/contact/success",
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/contact/success.vue",
     "chunkName": "pages/contact/success",
     "_name": "_7cfaee82"
+  },
+  {
+    "name": "blog-id",
+    "path": "/blog/:id",
+    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/blog/_id.vue",
+    "chunkName": "pages/blog/_id",
+    "_name": "_38e6e232"
   },
   {
     "name": "file-slug",
@@ -61,13 +82,6 @@
     "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/page/_id.vue",
     "chunkName": "pages/page/_id",
     "_name": "_73f5d81f"
-  },
-  {
-    "name": "posts-id",
-    "path": "/posts/:id?",
-    "component": "/Users/sarah/Sites/CLIENTS/otherlove/pause/app/pages/posts/_id.vue",
-    "chunkName": "pages/posts/_id",
-    "_name": "_b84d132e"
   },
   {
     "name": "index",

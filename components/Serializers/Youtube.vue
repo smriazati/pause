@@ -1,6 +1,11 @@
 <template>
     <client-only>
-        <youtube :video-id="videoId"></youtube>
+        <div class="video-wrapper">
+            <div class="iframe-wrapper">
+                <youtube :video-id="videoId"></youtube>
+            </div>
+            <p>{{ caption }}</p>
+        </div>
     </client-only>
 </template>
 <script>
@@ -16,7 +21,19 @@ export default {
         url: {
             type: String,
             default: () => ""
+        },
+        caption: {
+            type: String
         }
     }
 };
 </script>
+
+<style lang="scss" scoped>
+p {
+    text-align: left;
+    @include pSmallStyle;
+    color: #ADADAD;
+    margin-top: 15px;
+}
+</style>
