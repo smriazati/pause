@@ -11,7 +11,7 @@
         <ul class="flex-row">
           <li><nuxt-link to="/about">About</nuxt-link></li>
           <li><nuxt-link to="/services">What to Expect</nuxt-link></li>
-          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+          <li v-if="!isBlogHidden"><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           <li>
             <nuxt-link to="/book" class="btn primary fancy">Book Appointment</nuxt-link>
@@ -35,7 +35,7 @@
             <li @click="toggleMenu">
               <nuxt-link to="/services">What to Expect</nuxt-link>
             </li>
-            <li @click="toggleMenu">
+            <li v-if="!isBlogHidden" @click="toggleMenu">
               <nuxt-link to="/blog">Blog</nuxt-link>
             </li>
             <li @click="toggleMenu">
@@ -68,9 +68,20 @@
   </header>
 </template>
 <script>
+import { groq } from "@nuxtjs/sanity";
+
 export default {
+  async fetch() {
+    const query = groq`*[_type == "siteSettings"]{
+      isBlogHidden
+    }[0]`;
+    const data = await this.$sanity.fetch(query);
+    this.isBlogHidden = data.isBlogHidden;
+  },
+  fetchOnServer: false,
   data() {
     return {
+      isBlogHidden: true,
       isCollapsed: true,
       isMobile: false,
     };
